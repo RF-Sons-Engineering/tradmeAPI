@@ -14,10 +14,10 @@ pandas==2.1.4
 pandocfilters==1.5.0
 plotly==5.18.0
 premailer==3.10.0
-prometheus-client==0.20.0
+
 prompt-toolkit==3.0.43
 psutil==5.9.7
-pure-eval==0.2.2
+
 pycparser==2.21
 Pygments==2.17.2
 pyodbc==5.0.1
@@ -26,7 +26,7 @@ python-dateutil==2.8.2
 python-json-logger==2.0.7
 pytz==2023.3.post1
 pywin32==306
-pywinpty==2.0.13
+
 PyYAML==6.0.1
 pyzmq==25.1.2
 referencing==0.32.0
