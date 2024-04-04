@@ -1,0 +1,24 @@
+import requests
+
+def getUsedCars(url, token):
+
+    headers = {
+    'Authorization': f'Bearer {token}'
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return response.text
+
+
+# Example usage
+# url = 'https://api.trademe.co.nz/v1/Search/Motors/Used.json?sort_order=ExpiryDesc&page=1&rows=50'
+# token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkNCM0I0MkY3MDBBMTNFMkVDQkE5NDIzOTYwQUVDRjRERTc4M0Y2QjUiLCJ4NXQiOiJ5enRDOXdDaFBpN0xxVUk1WUs3UFRlZUQ5clUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2F1dGgudHJhZGVtZS5jby5ueiIsIm5iZiI6MTcwOTg3MjkzNSwiaWF0IjoxNzA5ODcyOTM1LCJleHAiOjE3MDk4NzM1MzUsImF1ZCI6WyJ0cmFkZW1lYXBpIiwia29ydWFwaSJdLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJUcmFkZU1lLk15VHJhZGVNZVJlYWQiLCJUcmFkZU1lLk15VHJhZGVNZVdyaXRlIiwiVHJhZGVNZS5NZXNzYWdlQm9hcmQiLCJUcmFkZU1lLkJpZGRpbmdBbmRCdXlpbmciLCJLb3J1QXBpLlJlYWQiLCJLb3J1QXBpLldyaXRlIiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInB3ZCJdLCJjbGllbnRfaWQiOiJmcmVuZF9jbGllbnQiLCJjbGllbnRfdG1faWQiOiIwQjMwMjZERUQzNTk1ODNFREFDN0RGMzY1NENBMzkyNyIsInN1YiI6IjM1MTk3MzQiLCJhdXRoX3RpbWUiOjE3MDYzNDQ1NDgsImlkcCI6InRyYWRlbWUiLCJyb2xlIjoidXNlciIsInNpZCI6IjUyNDRFRTQxQUQzQ0MzM0NBQkM1MDBEOUI2MkVENkRCIn0.AYf2wRkS5eh9bLrMiVHqt-UTv3qRdhEgetwi6BGR9gKejWYJZybQDe_2L8rIpMboHv4eIrm_fkdFuNfvvXzT3IWi-KYDnOrpnXXpx13MeabuYZxC5F0pX-jRm590eON2Q2-PEt5Foeb8_PhR_uVZkylbiKF0T-wIcgg4ZYNoRyQVjvN1rWeXEm1GuqgxPPMTxGJ5u84dHvupyoy2bopUygTBh5rmuH0xRgHvYbRSCcSKd9324I4a9GpNhYm4PvutxW4X-aCliHFNGeh3evNviHtwUUY8ZThhpPgNSPGYIzvFxuBnJNb8bmr7kCVpwUtlcNa7EYTLfDTmrtE_xtxQbqB5XowCt1iZ_03gc8rexBgHXIft6MrJeeeN09CB2Xxa8mYRsS6FMCIw2v5I182UCcXaDjnQFTyXhRXoJrAKTgMpp2ElA7GAr1LDUqo5IaCuyu5r2ilKQVTsIB4Aw66x9U7UDH2-wQ5zaSLBlMRxww6kja5MV96fpvBxx1s48xgnTBYIfaegUaqONt0cdIBs7OtG2zMnne-ZohCaX0oDSiYBWh62wz-gt45GKO56v_iZ3AS3qFaAF5bVv5MfvCI6fPCUa9Z5_IYYXbtiMxuLNxpm9OZGr4GdBMrE1M4FliFjC8z9WrFr9zgzZMd91FTlTwcsDJX8ZOLBSvgrBnkvyHk'
+# data = getUsedCars(url, token)
+
+# print(data)
+# for item in data['List']:
+#     print(item['Title'])
